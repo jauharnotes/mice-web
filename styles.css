@@ -824,7 +824,39 @@ body {
 }
 
 .package-card {
+  cursor: default;
+}
+
+/* Package image clickable for lightbox */
+.package-image {
   cursor: pointer;
+}
+
+/* Package Booking Button */
+.btn-package-booking {
+  background: linear-gradient(135deg, #4298d3 0%, #2c7bb8 100%);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(66, 152, 211, 0.2);
+}
+
+.btn-package-booking:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(66, 152, 211, 0.3);
+  background: linear-gradient(135deg, #3687c2 0%, #1b6aa7 100%);
+}
+
+.btn-package-booking:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(66, 152, 211, 0.2);
 }
 
 /* Our Package Section - Override title color */

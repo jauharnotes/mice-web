@@ -115,6 +115,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Package Booking buttons - Direct to WhatsApp with package-specific message
+  const bookingButtons = document.querySelectorAll(".btn-package-booking");
+  bookingButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const packageName = this.getAttribute("data-package");
+      const phoneNumber = "6281118870717";
+      const message = encodeURIComponent(
+        `Halo TOARE, saya tertarik untuk booking ${packageName} untuk MICE event perusahaan kami.`
+      );
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappURL, "_blank");
+    });
+  });
+
   // Add hover effects to cards
   const cards = document.querySelectorAll(
     ".benefit-card, .advantage-card, .service-card"
@@ -179,19 +193,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   });
 
-  // Lightbox functionality for package cards
+  // Lightbox functionality for package images (not entire card)
   const lightbox = document.getElementById("imageLightbox");
   const lightboxImg = document.getElementById("lightboxImage");
   const lightboxCaption = document.getElementById("lightboxCaption");
   const closeBtn = document.querySelector(".lightbox-close");
 
-  // Get all package cards
-  const packageCards = document.querySelectorAll(".package-card");
+  // Get all package images (not cards, only image areas)
+  const packageImages = document.querySelectorAll(".package-image");
 
-  packageCards.forEach((card) => {
-    card.addEventListener("click", function () {
-      const img = this.querySelector(".package-image img");
-      const caption = this.querySelector(".package-info h3");
+  packageImages.forEach((imageDiv) => {
+    imageDiv.addEventListener("click", function (e) {
+      e.stopPropagation(); // Prevent any parent event
+      const img = this.querySelector("img");
+      const card = this.closest(".package-card");
+      const caption = card.querySelector(".package-info h3");
 
       if (img && img.style.display !== "none") {
         lightbox.classList.add("active");
