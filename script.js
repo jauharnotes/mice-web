@@ -60,14 +60,19 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(el);
   });
 
-  // Chat widget functionality
+  // Chat widget functionality - Direct to WhatsApp
   const chatWidget = document.querySelector(".chat-widget");
 
   chatWidget.addEventListener("click", function () {
-    // You can implement actual chat functionality here
-    alert(
-      "Hubungi kami di +62 811 1887 071 atau toare.expeditions@gmail.com untuk konsultasi gratis!"
+    // WhatsApp number format: remove +, spaces, and dashes
+    const phoneNumber = "6281118870717"; // Format: country code + number without +
+    const message = encodeURIComponent(
+      "Halo TOARE, saya tertarik untuk konsultasi mengenai MICE."
     );
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, "_blank");
   });
 
   // Button click handlers
@@ -121,6 +126,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Hero background rotation
+  const heroBackgrounds = [
+    "./assets/images/hero-bg-1.jpg",
+    "./assets/images/hero-bg-2.jpg",
+    "./assets/images/hero-bg-3.jpg",
+  ];
+
+  let currentBgIndex = 0;
+  const heroBackground = document.getElementById("heroBackground");
+
+  function rotateHeroBackground() {
+    currentBgIndex = (currentBgIndex + 1) % heroBackgrounds.length;
+    heroBackground.style.backgroundImage = `url('${heroBackgrounds[currentBgIndex]}')`;
+    heroBackground.style.backgroundSize = "cover";
+    heroBackground.style.backgroundPosition = "center";
+    heroBackground.style.transition = "background-image 1s ease-in-out";
+  }
+
+  // Rotate background every 5 seconds
+  setInterval(rotateHeroBackground, 5000);
+
+  // Set initial background
+  if (heroBackground) {
+    heroBackground.style.backgroundImage = `url('${heroBackgrounds[0]}')`;
+    heroBackground.style.backgroundSize = "cover";
+    heroBackground.style.backgroundPosition = "center";
+  }
+
   // Add loading animation
   window.addEventListener("load", function () {
     document.body.style.opacity = "0";
@@ -129,5 +162,52 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       document.body.style.opacity = "1";
     }, 100);
+  });
+
+  // Lightbox functionality for package cards
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImg = document.getElementById("lightboxImage");
+  const lightboxCaption = document.getElementById("lightboxCaption");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  // Get all package cards
+  const packageCards = document.querySelectorAll(".package-card");
+
+  packageCards.forEach((card) => {
+    card.addEventListener("click", function () {
+      const img = this.querySelector(".package-image img");
+      const caption = this.querySelector(".package-info h3");
+
+      if (img && img.style.display !== "none") {
+        lightbox.classList.add("active");
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = caption ? caption.textContent : "";
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+      }
+    });
+  });
+
+  // Close lightbox when clicking the close button
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      lightbox.classList.remove("active");
+      document.body.style.overflow = "auto"; // Re-enable scrolling
+    });
+  }
+
+  // Close lightbox when clicking outside the image
+  lightbox.addEventListener("click", function (e) {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("active");
+      document.body.style.overflow = "auto"; // Re-enable scrolling
+    }
+  });
+
+  // Close lightbox with ESC key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && lightbox.classList.contains("active")) {
+      lightbox.classList.remove("active");
+      document.body.style.overflow = "auto"; // Re-enable scrolling
+    }
   });
 });

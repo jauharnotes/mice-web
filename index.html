@@ -1,322 +1,625 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOARE MICE - Membangun Potensi Tim Lewat Traveling</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <div class="logo">
-                    <img src="./assets/images/toare-logo.png" alt="TOARÉ Logo" class="logo-image">
-                </div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#services">Layanan</a></li>
-                <li><a href="#why-mice">Mengapa MICE</a></li>
-                <li><a href="#why-toare">Mengapa TOARE</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
+      <nav class="nav">
+        <div class="nav-brand">
+          <div class="logo">
+            <img
+              src="./assets/images/toare-logo.png"
+              alt="TOARÉ Logo"
+              class="logo-image"
+            />
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#why-mice">Mengapa MICE</a></li>
+          <li><a href="#why-toare">Mengapa TOARE</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
+      <div class="hero-background" id="heroBackground">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Wujudkan MICE Terbaik untuk Perusahaan Anda.</h1>
+        <p class="hero-description">
+          Dengan 5 Star Service, TOARE menghadirkan eksekusi profesional dari
+          awal hingga akhir, menciptakan pengalaman MICE yang efisien, nyaman,
+          dan berkelas untuk perusahaan Anda.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary">Layanan Kami</button>
+          <button class="btn btn-secondary">Konsultasi Gratis</button>
         </div>
-        <div class="hero-content">
-            <h1 class="hero-title">MICE: Membangun Potensi Tim Lewat Traveling!</h1>
-            <p class="hero-description">
-                TOARE membantu Anda merencanakan, menyelenggarakan, dan mensukseskan event MICE perusahaan 
-                dari awal hingga akhir acara dengan pengalaman traveling yang tak terlupakan.
-            </p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary">Layanan Kami</button>
-                <button class="btn btn-secondary">Konsultasi Gratis</button>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- About MICE Section -->
     <section id="about" class="about-mice">
-        <div class="container">
-            <div class="section-content">
-                <div class="content-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-users fa-3x"></i>
-                    </div>
-                </div>
-                <div class="content-text">
-                    <h2 class="section-title">Apa itu MICE?</h2>
-                    <div class="mice-definition">
-                        <h3>Meetings, Incentives, Conferences, Exhibitions</h3>
-                        <p>
-                            "Meeting? Conference? Exhibition?" Buat sebagian orang mungkin hanya dianggap anggaran "tambahan". 
-                            Padahal, kalau dieksekusi dengan tepat, MICE itu "investasi".
-                        </p>
-                        <p>
-                            Investasi untuk bikin tim Kamu lebih loyal. Lebih kompak. Lebih kreatif. 
-                            Dan ujung-ujungnya? Lebih produktif.
-                        </p>
-                        <p>
-                            Platform untuk kolaborasi, apresiasi, dan inovasi antar pekerja dalam satu perusahaan.
-                        </p>
-                    </div>
-                    <button class="btn btn-primary">Pelajari Lebih Lanjut</button>
-                </div>
+      <div class="container">
+        <div class="section-content">
+          <div class="content-image">
+            <div class="image-placeholder">
+              <i class="fas fa-users fa-3x"></i>
             </div>
+          </div>
+          <div class="content-text">
+            <h2 class="section-title">APA ITU MICE?</h2>
+            <div class="mice-definition">
+              <p>
+                Banyak yang menganggap MICE sekadar biaya tambahan, padahal MICE
+                adalah investasi strategis.
+              </p>
+              <p>
+                Investasi untuk membangun loyalitas, kekompakan, kreativitas,
+                dan produktivitas tim.
+              </p>
+              <p>
+                Melalui MICE, perusahaan mendapatkan platform kolaborasi,
+                apresiasi, dan inovasi fondasi penting untuk pertumbuhan jangka
+                panjang.
+              </p>
+            </div>
+            <button class="btn btn-primary">Pelajari Lebih Lanjut</button>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Our Package Section -->
+    <section class="our-package">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">OUR PACKAGE</h2>
+        </div>
+        <div class="package-grid">
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./assets/images/paket-mice/mice-01.jpg"
+                alt="Paket MICE 1"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="package-placeholder" style="display: none">
+                <i class="fas fa-box fa-3x"></i>
+              </div>
+            </div>
+            <div class="package-info">
+              <h3>Paket 1</h3>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./assets/images/paket-mice/mice-02.jpg"
+                alt="Paket MICE 2"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="package-placeholder" style="display: none">
+                <i class="fas fa-box fa-3x"></i>
+              </div>
+            </div>
+            <div class="package-info">
+              <h3>Paket 2</h3>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./assets/images/paket-mice/mice-03.jpg"
+                alt="Paket MICE 3"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="package-placeholder" style="display: none">
+                <i class="fas fa-box fa-3x"></i>
+              </div>
+            </div>
+            <div class="package-info">
+              <h3>Paket 3</h3>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./assets/images/paket-mice/mice-04.jpg"
+                alt="Paket MICE 4"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="package-placeholder" style="display: none">
+                <i class="fas fa-box fa-3x"></i>
+              </div>
+            </div>
+            <div class="package-info">
+              <h3>Paket 4</h3>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./assets/images/paket-mice/mice-05.jpg"
+                alt="Paket MICE 5"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="package-placeholder" style="display: none">
+                <i class="fas fa-box fa-3x"></i>
+              </div>
+            </div>
+            <div class="package-info">
+              <h3>Paket 5</h3>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./assets/images/paket-mice/mice-06.jpg"
+                alt="Paket MICE 6"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="package-placeholder" style="display: none">
+                <i class="fas fa-box fa-3x"></i>
+              </div>
+            </div>
+            <div class="package-info">
+              <h3>Paket 6</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Why MICE Important Section -->
     <section id="why-mice" class="why-mice">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">TOARE MICE Benefits</span>
-                <h2 class="section-title">Kenapa MICE Penting?</h2>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Karyawan Lebih Engaged</h3>
-                    <p>Tim menjadi lebih terlibat dan bersemangat dalam bekerja setelah pengalaman MICE yang menyenangkan.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-users-cog"></i>
-                    </div>
-                    <h3>Tim Lebih Kompak & Kreatif</h3>
-                    <p>Bonding yang terbentuk selama MICE meningkatkan kolaborasi dan kreativitas tim.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Produktivitas Meningkat</h3>
-                    <p>Karyawan yang fresh dan termotivasi akan memberikan performa kerja yang lebih baik.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Networking & Exposure Luas</h3>
-                    <p>Kesempatan untuk membangun jaringan dan exposure yang lebih luas dalam industri.</p>
-                </div>
-            </div>
-            <div class="roi-highlight">
-                <p><strong>💡 Think of it as ROI, bukan cost.</strong></p>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">TOARE MICE Benefits</span>
+          <h2 class="section-title">Kenapa MICE Penting?</h2>
         </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Karyawan Lebih Engaged</h3>
+            <p>
+              Tim menjadi lebih terlibat dan bersemangat dalam bekerja setelah
+              pengalaman MICE yang menyenangkan.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <h3>Tim Lebih Kompak & Kreatif</h3>
+            <p>
+              Bonding yang terbentuk selama MICE meningkatkan kolaborasi dan
+              kreativitas tim.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Produktivitas Meningkat</h3>
+            <p>
+              Karyawan yang fresh dan termotivasi akan memberikan performa kerja
+              yang lebih baik.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h3>Networking & Exposure Luas</h3>
+            <p>
+              Kesempatan untuk membangun jaringan dan exposure yang lebih luas
+              dalam industri.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Why TOARE Section -->
     <section id="why-toare" class="why-toare">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">TOARE Excellence</span>
-                <h2 class="section-title">Kenapa Melakukan MICE Bersama TOARE?</h2>
-            </div>
-            <div class="advantages-grid">
-                <div class="advantage-card">
-                    <div class="advantage-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <h3>Pengalaman +5 Tahun</h3>
-                    <p>TOARE sudah lama dikenal sebagai travel agent spesialis Open Trip & Private Trip. 
-                    Tapi yang belum banyak orang tahu—kami juga punya lini khusus MICE.</p>
-                </div>
-                <div class="advantage-card">
-                    <div class="advantage-icon">
-                        <i class="fas fa-globe-asia"></i>
-                    </div>
-                    <h3>Jaringan Destinasi Luas</h3>
-                    <p>Jaringan destinasi & vendor yang luas dan terkurasi di berbagai lokasi strategis.</p>
-                </div>
-                <div class="advantage-card">
-                    <div class="advantage-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Customizable</h3>
-                    <p>Dengan pengalaman ngurusin trip yang menantang sekalipun, kami paham bagaimana membuat event korporat jadi lancar, efektif, dan memorable.</p>
-                </div>
-                <div class="advantage-card">
-                    <div class="advantage-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Pendekatan Kreatif</h3>
-                    <p>🚀 Jadi, dibanding Kamu pusing mikirin rundown sendiri, percayakan saja ke TOARE. 
-                    Karena di tangan yang tepat, MICE bukan cuma acara… tapi strategi pertumbuhan perusahaan.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">TOARE Excellence</span>
+          <h2 class="section-title">WHY TOARE?</h2>
         </div>
+        <div class="advantages-grid">
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <h3>Pengalaman +5 Tahun</h3>
+            <p>
+              TOARE sudah lama dikenal sebagai travel agent spesialis Open Trip
+              & Private Trip. Tapi yang belum banyak orang tahu—kami juga punya
+              lini khusus MICE.
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-globe-asia"></i>
+            </div>
+            <h3>Jaringan Destinasi Luas</h3>
+            <p>
+              Jaringan destinasi & vendor yang luas dan terkurasi di berbagai
+              lokasi strategis.
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Customizable</h3>
+            <p>
+              Dengan pengalaman ngurusin trip yang menantang sekalipun, kami
+              paham bagaimana membuat event korporat jadi lancar, efektif, dan
+              memorable.
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Pendekatan Kreatif</h3>
+            <p>
+              Jadi, dibanding Kamu pusing mikirin rundown sendiri, percayakan
+              saja ke TOARE. Karena di tangan yang tepat, MICE bukan cuma acara…
+              tapi strategi pertumbuhan perusahaan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Event Section -->
+    <section id="services" class="our-event">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Our MICE Services</span>
+          <h2 class="section-title">OUR EVENT</h2>
+          <p class="section-description">
+            Apapun acara dan event MICE yang Anda butuhkan, kami siap membantu
+            menyelenggarakan acara terbaik untuk Anda dengan profesional.
+          </p>
+        </div>
+        <div class="event-grid">
+          <div class="event-card">
+            <div class="event-image">
+              <img
+                src="./assets/images/events/event-01.jpg"
+                alt="Workshop"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="event-placeholder" style="display: none">
+                <i class="fas fa-chalkboard-teacher fa-3x"></i>
+              </div>
+            </div>
+            <!-- <div class="event-overlay">
+              <h3>WORKSHOP</h3>
+            </div> -->
+          </div>
+          <div class="event-card">
+            <div class="event-image">
+              <img
+                src="./assets/images/events/event-02.jpg"
+                alt="Team Building"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="event-placeholder" style="display: none">
+                <i class="fas fa-users fa-3x"></i>
+              </div>
+            </div>
+            <!-- <div class="event-overlay">
+              <h3>TEAM BUILDING</h3>
+            </div> -->
+          </div>
+          <div class="event-card">
+            <div class="event-image">
+              <img
+                src="./assets/images/events/event-03.jpg"
+                alt="Awarding"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="event-placeholder" style="display: none">
+                <i class="fas fa-trophy fa-3x"></i>
+              </div>
+            </div>
+            <!-- <div class="event-overlay">
+              <h3>AWARDING</h3>
+            </div> -->
+          </div>
+          <div class="event-card">
+            <div class="event-image">
+              <img
+                src="./assets/images/events/event-04.jpg"
+                alt="Gathering"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="event-placeholder" style="display: none">
+                <i class="fas fa-glass-cheers fa-3x"></i>
+              </div>
+            </div>
+            <!-- <div class="event-overlay">
+              <h3>GATHERING</h3>
+            </div> -->
+          </div>
+          <div class="event-card">
+            <div class="event-image">
+              <img
+                src="./assets/images/events/event-05.jpg"
+                alt="Incentive Trip"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="event-placeholder" style="display: none">
+                <i class="fas fa-plane fa-3x"></i>
+              </div>
+            </div>
+            <!-- <div class="event-overlay">
+              <h3>INCENTIVE TRIP</h3>
+            </div> -->
+          </div>
+          <div class="event-card">
+            <div class="event-image">
+              <img
+                src="./assets/images/events/event-06.jpg"
+                alt="Custom Event"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="event-placeholder" style="display: none">
+                <i class="fas fa-calendar-alt fa-3x"></i>
+              </div>
+            </div>
+            <!-- <div class="event-overlay">
+              <h3>CUSTOM EVENT</h3>
+            </div> -->
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">TOARE Portfolio</span>
-                <h2 class="section-title">Dokumentasi MICE Yang Telah Kami Selenggarakan</h2>
-                <p class="section-description">
-                    Kami telah menyelenggarakan banyak event MICE dengan berbagai tema untuk perusahaan 
-                    swasta dan pemerintah di berbagai destinasi menarik.
-                </p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <i class="fas fa-mountain fa-3x"></i>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <i class="fas fa-building fa-3x"></i>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <i class="fas fa-users fa-3x"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-cta">
-                <p>Tertarik untuk menyelenggarakan MICE bersama TOARE? Hubungi kami sekarang!</p>
-                <button class="btn btn-primary">Hubungi Kami</button>
-            </div>
+    <!-- <section class="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">TOARE Portfolio</span>
+          <h2 class="section-title">
+            Dokumentasi MICE Yang Telah Kami Selenggarakan
+          </h2>
+          <p class="section-description">
+            Kami telah menyelenggarakan banyak event MICE dengan berbagai tema
+            untuk perusahaan swasta dan pemerintah di berbagai destinasi
+            menarik.
+          </p>
         </div>
-    </section>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <i class="fas fa-mountain fa-3x"></i>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <i class="fas fa-building fa-3x"></i>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <i class="fas fa-users fa-3x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <!-- Call to Action Section -->
     <section id="contact" class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <div class="cta-text">
-                    <h2>Mau Custom MICE untuk Perusahaanmu?</h2>
-                    <p>Biarkan kami membantu menyelenggarakan event MICE terbaik untuk Anda</p>
-                </div>
-                <div class="cta-button">
-                    <button class="btn btn-primary">Konsultasi GRATIS</button>
-                </div>
-            </div>
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-text">
+            <h2>Rencanakan MICE Anda bersama TOARE Sekarang!</h2>
+            <p>
+              TOARE Siap Merancang dan Menyelenggarakan MICE Terbaik untuk
+              Perusahaan Anda!
+            </p>
+          </div>
+          <div class="cta-button">
+            <button class="btn btn-primary">Konsultasi GRATIS</button>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Our MICE Services</span>
-                <h2 class="section-title">Layanan MICE dari TOARE</h2>
-                <p class="section-description">
-                    Apapun acara dan event MICE yang Anda butuhkan, kami siap membantu menyelenggarakan 
-                    acara terbaik untuk Anda dengan profesional.
-                </p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-image">
-                        <i class="fas fa-handshake fa-2x"></i>
-                    </div>
-                    <h3>Corporate Meetings</h3>
-                    <p>Meeting dan conference dengan berbagai konsep tema yang menarik dan produktif.</p>
-                    <button class="btn btn-outline">Selengkapnya</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-image">
-                        <i class="fas fa-trophy fa-2x"></i>
-                    </div>
-                    <h3>Incentive Programs</h3>
-                    <p>Program insentif dan reward untuk meningkatkan motivasi dan loyalitas karyawan.</p>
-                    <button class="btn btn-outline">Selengkapnya</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-image">
-                        <i class="fas fa-microphone fa-2x"></i>
-                    </div>
-                    <h3>Conference & Exhibition</h3>
-                    <p>Konferensi dan pameran yang membantu proses produksi semua acara Anda.</p>
-                    <button class="btn btn-outline">Selengkapnya</button>
-                </div>
-            </div>
+    <!-- Our Client Section -->
+    <section class="our-client">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">OUR CLIENT</h2>
         </div>
+        <div class="client-grid">
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-1.png"
+              alt="Client 1"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-2.png"
+              alt="Client 2"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-3.png"
+              alt="Client 3"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-4.png"
+              alt="Client 4"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-5.png"
+              alt="Client 5"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-6.png"
+              alt="Client 6"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-7.png"
+              alt="Client 7"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-8.png"
+              alt="Client 8"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-9.png"
+              alt="Client 9"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-10.png"
+              alt="Client 10"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/images/clients/client-11.jpeg"
+              alt="Client 11"
+              onerror="this.style.display='none';"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <div class="logo">
-                            <img src="/assets/images/toare-logo.png" alt="TOARÉ Logo" class="logo-image">
-                        </div>
-                        <p>
-                            TOARÉ merupakan perusahaan travel agent yang melayani jasa MICE mulai dari 
-                            meeting, conference, incentive, exhibition, dll. Hubungi kami untuk info selengkapnya.
-                        </p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Tentang</h4>
-                    <ul>
-                        <li><a href="#about">Tentang</a></li>
-                        <li><a href="#services">Layanan</a></li>
-                        <li><a href="#why-mice">Mengapa MICE</a></li>
-                        <li><a href="#why-toare">Mengapa TOARE</a></li>
-                        <li><a href="#contact">Kontak</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Sosial Media</h4>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">YouTube</a></li>
-                        <li><a href="#">TikTok</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Kontak</h4>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> toare.expeditions@gmail.com</p>
-                        <p><i class="fas fa-phone"></i> +62 811 1887 071</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-brand">
+              <div class="logo">
+                <img
+                  src="/assets/images/toare-logo.png"
+                  alt="TOARÉ Logo"
+                  class="logo-image"
+                />
+              </div>
+              <p>
+                TOARÉ merupakan perusahaan travel agent yang melayani jasa MICE
+                mulai dari meeting, conference, incentive, exhibition, dll.
+                Hubungi kami untuk info selengkapnya.
+              </p>
             </div>
-            <div class="footer-bottom">
-                <div class="footer-bottom-left">
-                    <p>Copyright TOARE © All Rights Reserved</p>
-                </div>
-                <div class="footer-bottom-right">
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
+          </div>
+          <div class="footer-section">
+            <h4>Tentang</h4>
+            <ul>
+              <li><a href="#about">Tentang</a></li>
+              <li><a href="#services">Layanan</a></li>
+              <li><a href="#why-mice">Mengapa MICE</a></li>
+              <li><a href="#why-toare">Mengapa TOARE</a></li>
+              <li><a href="#contact">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Sosial Media</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">TikTok</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Kontak</h4>
+            <div class="contact-info">
+              <p><i class="fas fa-envelope"></i> toare.expeditions@gmail.com</p>
+              <p><i class="fas fa-phone"></i> +62 811 1887 071</p>
+              <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
             </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-left">
+            <p>Copyright TOARE © All Rights Reserved</p>
+          </div>
+          <div class="footer-bottom-right">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- Image Lightbox Overlay -->
+    <div id="imageLightbox" class="lightbox-overlay">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-content" id="lightboxImage" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
 
     <!-- Chat Widget -->
     <div class="chat-widget">
-        <i class="fas fa-comments"></i>
+      <i class="fas fa-comments"></i>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
