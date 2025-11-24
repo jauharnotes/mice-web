@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   chatWidget.addEventListener("click", function () {
     // WhatsApp number format: remove +, spaces, and dashes
-    const phoneNumber = "6281118870717"; // Format: country code + number without +
+    const phoneNumber = "6281213733750"; // Format: country code + number without +
     const message = encodeURIComponent(
       "Halo TOARE, saya tertarik untuk konsultasi mengenai MICE."
     );
@@ -76,26 +76,41 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Button click handlers
-  const ctaButtons = document.querySelectorAll(".btn-primary, .btn-secondary");
+  const ctaButtons = document.querySelectorAll(
+    ".btn-primary, .btn-secondary, .btn-cta"
+  );
 
   ctaButtons.forEach((button) => {
     button.addEventListener("click", function (e) {
-      // If it's a contact button, scroll to contact section
-      if (
-        this.textContent.includes("Konsultasi") ||
-        this.textContent.includes("Hubungi")
-      ) {
-        e.preventDefault();
-        const contactSection = document.querySelector("#contact");
-        if (contactSection) {
+      e.preventDefault();
+
+      // If it's "Layanan Kami" button, scroll to services section
+      if (this.textContent.includes("Layanan")) {
+        const servicesSection = document.querySelector("#services");
+        if (servicesSection) {
           const headerHeight = document.querySelector(".header").offsetHeight;
-          const targetPosition = contactSection.offsetTop - headerHeight;
+          const targetPosition = servicesSection.offsetTop - headerHeight;
 
           window.scrollTo({
             top: targetPosition,
             behavior: "smooth",
           });
         }
+      }
+      // If it's a contact/consultation button, open WhatsApp
+      else if (
+        this.textContent.includes("Konsultasi") ||
+        this.textContent.includes("Hubungi")
+      ) {
+        // WhatsApp configuration
+        const phoneNumber = "6281213733750";
+        const message = encodeURIComponent(
+          "Halo TOARE, saya tertarik untuk konsultasi mengenai MICE."
+        );
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+        // Open WhatsApp in new tab
+        window.open(whatsappURL, "_blank");
       }
     });
   });

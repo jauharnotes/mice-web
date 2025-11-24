@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://mice.toare.com/sitemap.xml
+
+# Disallow specific files
+Disallow: /script.js
+Disallow: /styles.css
+
+# Crawl-delay
+Crawl-delay: 1
