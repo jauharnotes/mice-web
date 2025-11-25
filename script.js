@@ -1,9 +1,44 @@
 // Smooth scrolling for navigation links
 document.addEventListener("DOMContentLoaded", function () {
-  // Smooth scrolling
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  // Hamburger menu toggle
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const navLinksItems = document.querySelectorAll(".nav-links a");
 
-  navLinks.forEach((link) => {
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+    document.body.style.overflow = navLinks.classList.contains("active")
+      ? "hidden"
+      : "auto";
+  });
+
+  // Close menu when clicking on a link
+  navLinksItems.forEach((link) => {
+    link.addEventListener("click", function () {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+      document.body.style.overflow = "auto";
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (e) {
+    if (
+      !hamburger.contains(e.target) &&
+      !navLinks.contains(e.target) &&
+      navLinks.classList.contains("active")
+    ) {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+  });
+
+  // Smooth scrolling
+  const navLinksAll = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  navLinksAll.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
 
@@ -239,6 +274,27 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.key === "Escape" && lightbox.classList.contains("active")) {
       lightbox.classList.remove("active");
       document.body.style.overflow = "auto"; // Re-enable scrolling
+    }
+  });
+
+  // Adjust chat widget position when scrolling near footer
+  const footer = document.querySelector(".footer");
+  const chatWidgetElement = document.querySelector(".chat-widget");
+
+  window.addEventListener("scroll", function () {
+    if (chatWidgetElement && footer) {
+      const footerRect = footer.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // If footer is visible in viewport (at least 150px from bottom)
+      if (footerRect.top < windowHeight - 80) {
+        // Move chat widget up to avoid covering social icons
+        const overlap = windowHeight - footerRect.top;
+        chatWidgetElement.style.bottom = Math.max(20, overlap + 20) + "px";
+      } else {
+        // Reset to default position
+        chatWidgetElement.style.bottom = "20px";
+      }
     }
   });
 });
